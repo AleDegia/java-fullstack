@@ -12,8 +12,8 @@ public class calcolaPerimetroArea {
         //lato=5;
         int area= lato+lato;
         int perimetro= lato*4;
-        System.out.println(lato);
-        System.out.println(area);
-        System.out.println(perimetro);
+        System.out.println("il lato inserito: "+lato);
+        System.out.println("l'area è: "+area);
+        System.out.println("il perimetro è: "+perimetro);
     }
 }
