@@ -37,3 +37,5 @@ public class calcolaPerimetroArea {
         input.close();
     }
 }
+
+/*note per collaboratore */
