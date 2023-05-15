@@ -15,7 +15,13 @@ public class calcolaPerimetroArea {
         // aggiunto una condizione che verifica l'input
         //aggiungo una condizione aggiuntiva che verifica che l'input sia tra 2 valori specifici
         if (lato > 40 || lato < 1) {
+            if (lato>40){
+                System.out.println("hai inserito un numero grande");
+            }
             System.out.println("hai inserito un numero non valido");
+            if(lato<1){
+                System.out.println("Hai inserito un numero piccolo");
+            }
 
         } else {
             //se l'input è <= a 40
