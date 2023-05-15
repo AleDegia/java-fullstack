@@ -24,7 +24,7 @@ public class calcolaPerimetroArea {
             }
 
         } else {
-            //se l'input è <= a 40
+            //se l'input è <= a 40 agit 
             System.out.println("il lato inserito: " + lato);
             System.out.println("l'area è: " + area);
             System.out.println("il perimetro è: " + perimetro);
