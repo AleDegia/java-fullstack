@@ -1,4 +1,4 @@
-import java.util.HashMap; //questo es restituirà il numero di volte che vengono ripetute le parole
+import java.util.HashMap; //questo es restituirà il numero di volte che vengono ripetute le parole digitate dall utente
 import java.util.Map;
 import java.util.Scanner;
 
