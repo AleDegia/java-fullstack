@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Main3 {
     public static void main(String[] args) {
-        String csvFile ="C:/Users/Java/Documents/corso java/java_workspaces/java-fullstack-assignment/es_30";
+        String csvFile ="C:/Users/Java/Documents/corso java/java_workspaces/java-fullstack-assignment/es_30/prodotto.csv";
         String line = "";
         String csvSplitBy = ",";  //specifico il divisore del csv
         int contatoreFrutta=0;

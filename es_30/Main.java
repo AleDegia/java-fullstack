@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-    String  csvFile= "C:/Users/Java/Documents/corso java/java_workspaces/java-fullstack-assignment/es_30/prodotto.csv";
+    String  csvFile= "C:/Users/Java/Documents/corso java/java_workspaces/java-fullstack-assignment/es_30/prodotto2.csv";
     String header = "ID_Prodotto, Nome_prodotto, Categoria, Prezzo, Quantità, DataVendita\n";
     String[] data = {
         "1,Mela,Frutta,0.50,100,2023-06-10",
