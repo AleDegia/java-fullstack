@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -12,6 +14,11 @@ public class Corpo {
     Scanner input = new Scanner(System.in);
     List<String> azioniScelte = new ArrayList<String>();
     //List<String> azioniDisponibili = new ArrayList<String>();
+
+    String  csvFile= "C:/Users/Java/Documents/corso java/java_workspaces/esercitazioni/esBorsaAle/esBorsaClassi/azGxG.csv";
+    String header = "Giorno, Nome, Prezzo\n";
+    List<String> data = new ArrayList<String>();
+    //List<String> giorniScelti = new ArrayList<String>();
 
     String amazon = "amazon"; //per usare l'equals
         String meta = "meta";
@@ -95,6 +102,10 @@ public class Corpo {
                         System.out.println("la variazione percentuale al giorno " + i + " rispetto al giorno 0 è di "
                                 + Math.round(sommaVariazioniAmazon * 100.0) / 100.0 + "%");
                         System.out.println();
+                        data.add(String.valueOf(i));
+                        data.add("Amazon");
+                        data.add(String.valueOf(prezzoVariatoAmazon));
+                        data.add("---------");
                     }
                 } else if (variazDailyAmazon < 0) {
                     prezzoVariatoAmazon = (((prezzoInizialeAmazon / 100) * variazDailyAmazon) + prezzoInizialeAmazon);
@@ -106,6 +117,11 @@ public class Corpo {
                         System.out.println("la variazione percentuale al giorno " + i + " rispetto al giorno 0 è di "
                                 + Math.round(sommaVariazioniAmazon * 100.0) / 100.0 + "%");
                         System.out.println();
+                        data.add(String.valueOf(i));
+                        data.add("Amazon");
+                        data.add(String.valueOf(prezzoVariatoAmazon));
+                        data.add("---------");
+                       
                     }
                 } 
                 
@@ -144,5 +160,36 @@ public class Corpo {
                         + (((prezzoVariatoAlibaba - prezzoInizialeAlibaba) / prezzoInizialeAlibaba) * 100) + "%");
             }
         }
+        /*for(String dati:data){
+        System.out.print("Giorno " + dati);}*/
+
+        FileWriter fileWriter = null;
+
+    try{
+        fileWriter = new FileWriter(csvFile);
+
+        fileWriter.append(header);
+
+        for(String line : data){
+        fileWriter.append(line);
+        fileWriter.append("\n");
+    }
+
+     System.out.println("File CSV creato con successo");
+    
+   
+} catch(Exception e){
+    System.out.println("errore in CsvfileWriter");
+    e.printStackTrace();  //teniamo traccia dell'errore
+} finally{
+    try{
+        fileWriter.flush();
+        fileWriter.close();
+
+    } catch (IOException e){
+        System.out.println("errore durante il flush/close");
+        e.printStackTrace();
+    }
+}
     }}
 
