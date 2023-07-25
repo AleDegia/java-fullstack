@@ -1,0 +1,39 @@
+lancio il codice nella rotta della cartella mvn
+
+- dopo aver installato maven, se non lo ho gia presente:
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=simple-webapp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+
+- aggiungere il nodo dependency nel codice del pom sotto dependencies
+
+<dependency>
+        <groupId>org.xerial</groupId>
+        <artifactId>sqlite-jdbc</artifactId>
+        <version>3.42.0.0</version>
+    </dependency>
+
+
+
+mvn compile   per compilare  (sulla rotta wimple-webapp)
+
+
+librerie da importare nel file java:
+
+import java.sql.Connection  -> crea la connessione con il database
+import java.sql.DriverManager;   //ci mette in connessione con il database
+import java.sql.SQLException;    //come gestisce le eccezioni sqlite
+import java.sql.Statement;      //serve pre creare la query
+
+
+string sql : in maiuscolo le operazioni da eseguire
+
+scaricare estensione sqlite viewer
+
+mvn exec:java -Dexec.mainClass="CreaDB"
+
+mvn exec:java -Dexec.mainClass="AggiungiColonne"
+
+mvn exec:java -Dexec.mainClass="InserisciDati"
+...
+
