@@ -1,6 +1,3 @@
-import java.io.File;
-import java.io.FilenameFilter;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -94,10 +91,10 @@ public class Main {
                     }
 
                 } catch (Exception e) {
-                    System.out.println("Si è verificato un errore: " + e.getMessage());
+                    System.out.println("Si ï¿½ verificato un errore: " + e.getMessage());
                     scanner.close();
                 } finally {
-                    // Il codice qui dentro verrà eseguito indipendentemente dal fatto che
+                    // Il codice qui dentro verrï¿½ eseguito indipendentemente dal fatto che
                     // un'eccezione sia stata lanciata o meno.
                     cont = true;
                 }
