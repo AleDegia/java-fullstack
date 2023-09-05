@@ -1,0 +1,9 @@
+DeleteDatabase.class
+Main.class
+VisualizzaDati.class
+SalvaInCSV.class
+InserisciManual.class
+CancellaDati.class
+CreaDatabase.class
+ModificaDati.class
+InserisciDummyDatas.class
